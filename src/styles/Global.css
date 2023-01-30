@@ -1,0 +1,30 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Knewave&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html, body, input {
+    font-family: "Roboto", sans-serif;
+    color: #2A3035;
+    height: 100%;
+    font-size: 18px;
+    -webkit-font-smoothing: antialiased;
+}
+
+a {
+    color: #2A3035;
+    text-decoration: none;
+}
+
+body main#main {
+    padding-top: 20px;
+}
+
+body main#main .error-message {
+    color: #f8857e !important;
+}

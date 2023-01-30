@@ -1,0 +1,315 @@
+/*
+*
+* MEDIA COMMON
+*
+*/
+
+/* Both modes */
+
+body main#main legend.title img {
+    float: left;
+    cursor: pointer;
+}
+
+body main#main legend.title h1 {
+    font-weight: 700;
+    text-align: center;
+    text-transform: uppercase;
+    padding-bottom: 5px;
+    overflow: hidden;
+    white-space: nowrap;
+    letter-spacing: .12em;
+}
+
+body main#main .search,
+body main#main .result {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+body main#main .search #search-joke .buttons {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+body.default-mode main#main .result .joke#random-joke #random-joke-box span#random-joke-result{
+    font-family: 'Knewave', cursive;
+    font-size: 25px;
+    text-align: center;
+    height: auto;
+}
+
+body main#main button {
+    margin: 20px 10px;
+    color: #2A3035;
+    background-color: #FFF;
+    border: 1px solid #2A3035;
+    border-radius: 50px;
+    padding: 10px 20px;
+}
+
+body main#main button:hover {
+    background-color: #2A3035;
+    color: #FFF;
+}
+
+body main#main .result .joke#random-joke {
+    background-position: center;
+    background-image: url('/src/assets/random-joke-bg.jpg');
+    height: 600px;
+    width: 100%;
+    background-size: 600px auto;
+    background-repeat: no-repeat;
+    background-color: #FFF;
+    display: flex;
+    justify-content: center;
+}
+
+body main#main #search-joke input#search-box:focus-visible {
+    outline: none;
+}
+
+body .black-screen {
+    position: absolute;
+    z-index: 5;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #2A3035;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Default Mode */
+
+body.default-mode main#main {
+    margin: 0 auto;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+body.default-mode main#main .result .joke#search-result {
+    display: none;
+}
+
+body.default-mode main#main .result .joke#random-joke #random-joke-box {
+    width: 190px;
+    height: 170px;
+    margin-top: 90px;
+    position: relative;
+    text-align: center;
+    display: flex;
+    align-items: center;
+}
+
+body.default-mode main#main #search-joke input#search-box {
+    width: 100%;
+    background: none;
+    border: none;
+    border-bottom: 2px solid #939393;
+    padding-bottom: 5px;
+    color: #2A3035;
+}
+
+/* Search Mode */
+
+body.search-result-mode main#main button {
+    padding: 5px 10px;
+    font-size: 14px;
+    width: max-content;
+}
+
+body.search-result-mode::-webkit-scrollbar {
+    width: 7px;
+    border-left: solid 1px #f8857e;
+}
+
+body.search-result-mode::-webkit-scrollbar-thumb {
+    background: #f8857e; 
+    border-radius: 10px;
+}
+
+body.search-result-mode main#main .search {
+    position: fixed;
+    align-items: center;
+    justify-content: flex-start;
+    box-shadow: 0px 5px 15px -5px rgba(0,0,0,0.5);
+    -webkit-box-shadow: 0px 5px 15px -5px rgba(0,0,0,0.5);
+    -moz-box-shadow: 0px 5px 15px -5px rgba(0,0,0,0.5);
+    background-color: #FFF;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+}
+
+body.search-result-mode main#main legend.title {
+    display: block;
+}
+
+body.search-result-mode main#main legend.title img {
+    margin-top: 10px;
+    position: fixed;
+    z-index: 3;
+}
+
+body.search-result-mode main#main legend.title h1 {
+    display: none;
+}
+
+body.search-result-mode main#main .result .joke#random-joke {
+    display: none;
+}
+
+body.search-result-mode main#main .result .joke#search-result {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+body.search-result-mode main#main .joke li {
+    list-style: none;
+    padding: 15px 0 10px;
+    line-height: 1.6;
+    width: 95%;
+    font-size: 20px;
+}
+
+body.search-result-mode main#main .joke li:not(:last-child) {
+    border-bottom: 1px solid #939393;
+}
+
+body.search-result-mode main#main .joke li:before {
+    content: '';
+    position: relative;
+    bottom: -8px;
+    display: inline-block;
+    background-image: url();
+    height: 50px;
+    width: 50px;
+}
+
+/* body.search-result-mode main#main #search-joke .buttons #get-lucky-joke {
+    display: none;
+} */
+
+body.search-result-mode main#main #search-joke input#search-box {
+    width: 100%;
+    background: none;
+    border: none;
+    border-bottom: 2px solid #939393;
+    padding-bottom: 5px;
+    color: #2A3035;
+}
+
+/*
+*
+* DESKTOP
+*
+*/
+@media screen and (min-width: 768px) {
+    
+    body.default-mode main#main {
+        width: 90%;
+    }
+    
+    body main#main legend.title img {
+        height: 50px;
+    }
+    
+    body main#main .search #search-joke {
+        width: 50%;
+        margin-top: 10px;
+    }
+    
+    body.default-mode main#main legend.title h1{
+        font-size: 50px;
+        margin: 0 auto 40px;
+    }
+    
+    body.default-mode main#main button {
+        font-size: 17px;
+    }
+    
+    body main#main .result .joke#random-joke {
+        background-position: center;
+    }
+    
+    body.default-mode main#main .result .joke#random-joke #random-joke-box {
+        margin-left: 290px;
+    }
+    
+    body.search-result-mode main#main .search {
+        padding-left: 60px;
+        flex-direction: row;
+    }
+    
+    body.search-result-mode main#main button {
+        margin: 20px;
+    }
+    
+    body.search-result-mode main#main .result .joke#search-result {
+        padding-top: 100px;
+    }
+}
+
+/*
+*
+* MOBILE
+*
+*/
+@media screen and (max-width: 767px) {
+    
+    body main#main {
+        width: 100%;
+    }
+    
+    body main#main legend.title img {
+        height: 27px;
+    }
+    
+    body main#main .search #search-joke {
+        width: 85%;
+        margin-top: 10px;
+    }
+    
+    body main#main .result .joke#random-joke {
+        background-position: right;
+    }
+    
+    body.default-mode main#main .search {
+        margin-top: 10px;
+    }
+    
+    body.default-mode main#main legend.title h1{
+        font-size: 27px;
+        margin: 0 10px;
+    }
+    
+    body.default-mode main#main button {
+        font-size: 14px;
+    }
+    
+    body.default-mode main#main .result .joke#random-joke #random-joke-box {
+        margin-left: 115px;
+    }
+    
+    body.search-result-mode main#main .search {
+        padding-left: 10px;
+        flex-direction: column;
+    }
+    
+    body.search-result-mode main#main button {
+        margin: 10px;
+    }
+    
+    body.search-result-mode main#main .result .joke#search-result {
+        padding-top: 130px;
+    }
+}
